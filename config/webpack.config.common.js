@@ -19,12 +19,6 @@ module.exports = {
       template: paths.appTemplateHtml
     })
   ],
-  resolve: {
-    alias: {
-      "react": "preact/compat",
-      "react-dom": "preact/compat"
-    }
-  },
   module: {
     rules: [
       {
