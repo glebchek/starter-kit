@@ -6,5 +6,7 @@ type AppProps = {
 };
 
 export default function App(props: AppProps) {
-  return <div>Hello, {props.name}!</div>;
+  const { name } = props;
+  const greetings = `Hello, ${name}!`;
+  return <div>greetings</div>;
 }
