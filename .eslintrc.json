@@ -18,9 +18,5 @@
   },
   "plugins": ["react", "flowtype"],
   "rules": {},
-  "settings": {
-    "import/resolver": {
-      "babel-module": {}
-    }
-  }
+  "settings": {}
 }

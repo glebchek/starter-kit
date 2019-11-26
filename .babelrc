@@ -1,15 +1,4 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-flow"],
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": ["./src"],
-        "alias": {
-          "react": "preact/compat",
-          "react-dom": "preact/compat"
-        }
-      }
-    ]
-  ]
+  "plugins": []
 }
