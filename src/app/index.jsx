@@ -5,8 +5,7 @@ type AppProps = {
   name?: string,
 };
 
-export default function App(props: AppProps) {
-  const { name } = props;
+export default function App({ name = 'World' }: AppProps) {
   const greetings = `Hello, ${name}!`;
-  return <div>greetings</div>;
+  return <div>{greetings}</div>;
 }

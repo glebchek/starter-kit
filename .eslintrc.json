@@ -8,5 +8,8 @@
   "env": {
     "browser": true
   },
-  "plugins": ["react", "flowtype"]
+  "plugins": ["react", "flowtype"],
+  "rules": {
+    "react/require-default-props": "off"
+  }
 }

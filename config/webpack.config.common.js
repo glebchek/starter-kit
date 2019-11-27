@@ -24,14 +24,15 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        resolve: {
+          extensions: ['.js', '.jsx', '.json'],
+        },
+        use: ['babel-loader', 'eslint-loader']
       },
       {
         test: /\.(png|svg|jpg)$/,
         use: ["file-loader"]
       }
-    ]
+    ],
   }
 };
