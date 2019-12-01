@@ -1,11 +1,17 @@
 // @flow
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-type AppProps = {
-  name?: string,
-};
+import Greeting from '../greeting';
 
-export default function App({ name = 'World' }: AppProps) {
-  const greetings = `Hello, ${name}!`;
-  return <div>{greetings}</div>;
+export default function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path={['/', '/user/:name']}>
+          <Greeting />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
