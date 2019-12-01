@@ -3,6 +3,7 @@ const merge = require("webpack-merge");
 
 //Plugins
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 
 //Local
 const paths = require("./paths");
@@ -17,7 +18,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Starter Kit",
       template: paths.appTemplateHtml
-    })
+    }),
+    new DuplicatePackageCheckerPlugin()
   ],
   module: {
     rules: [
