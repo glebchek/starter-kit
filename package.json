@@ -1,8 +1,10 @@
 {
   "name": "@glebchek/starter-kit-frontend",
+  "author": "Gleb Chekushin <mail@glebchek.com>",
+  "description": "Starting kit for new projects",
+  "license": "MIT",
   "version": "0.0.1",
   "private": true,
-  "description": "Starting kit for new projects",
   "main": "index.jsx",
   "scripts": {
     "build": "webpack --config ./config/webpack.config.prod.js",
@@ -18,8 +20,6 @@
   "keywords": [
     "starter-kit"
   ],
-  "author": "Gleb Chekushin <mail@glebchek.com>",
-  "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/glebchek/starter-kit-frontend/issues"
   },
