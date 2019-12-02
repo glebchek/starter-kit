@@ -1,6 +1,7 @@
 {
-  "name": "starter-kit",
+  "name": "@glebchek/starter-kit-frontend",
   "version": "0.0.1",
+  "private": true,
   "description": "Starting kit for new projects",
   "main": "index.jsx",
   "scripts": {
@@ -10,11 +11,19 @@
     "lint": "eslint \"./src/**/*.{js,jsx}\"",
     "lint-fix": "eslint --fix \"./src/**/*.{js,jsx}\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glebchek/starter-kit-frontend.git"
+  },
   "keywords": [
     "starter-kit"
   ],
   "author": "Gleb Chekushin <mail@glebchek.com>",
   "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/glebchek/starter-kit-frontend/issues"
+  },
+  "homepage": "https://github.com/glebchek/starter-kit-frontend#readme",
   "devDependencies": {
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
