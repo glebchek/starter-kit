@@ -5,7 +5,7 @@
   "main": "index.jsx",
   "scripts": {
     "build": "webpack --config ./config/webpack.config.prod.js",
-    "server": "webpack-dev-server --config ./config/webpack.config.dev.js --hot",
+    "start": "webpack-dev-server --config ./config/webpack.config.dev.js --hot",
     "test": "npm run lint && flow status",
     "lint": "eslint \"./src/**/*.{js,jsx}\"",
     "lint-fix": "eslint --fix \"./src/**/*.{js,jsx}\""
