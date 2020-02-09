@@ -10,7 +10,7 @@ const appAssets = path.resolve(appSrc, "assets");
 const appConfig = path.resolve(appRoot, "config");
 const appTemplateHtml = path.resolve(appAssets, "index.html");
 const appTargetHtml = path.resolve(appDist, "index.html");
-const appIndex = path.resolve(appSrc, "index.jsx");
+const appIndex = path.resolve(appSrc, "index.tsx");
 
 module.exports = {
   appRoot,

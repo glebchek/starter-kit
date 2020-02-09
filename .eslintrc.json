@@ -1,14 +1,19 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "extends": [
-    "airbnb",
-    "plugin:react/recommended",
-    "plugin:flowtype/recommended"
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "env": {
     "browser": true
   },
-  "plugins": ["react", "react-hooks", "flowtype"],
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
   "rules": {
     "react/require-default-props": "off"
   }

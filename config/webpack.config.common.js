@@ -24,10 +24,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(t|j)sx?$/,
         exclude: /node_modules/,
         resolve: {
-          extensions: ['.js', '.jsx', '.json'],
+          extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         },
         use: ['babel-loader', 'eslint-loader']
       },
