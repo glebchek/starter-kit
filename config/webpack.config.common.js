@@ -12,7 +12,8 @@ module.exports = {
   entry: paths.appIndex,
   output: {
     path: paths.appDist,
-    filename: "[name].[hash:8].js"
+    filename: "[name].[hash:8].js",
+    publicPath: "/"
   },
   plugins: [
     new HtmlWebpackPlugin({
