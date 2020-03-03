@@ -9,9 +9,8 @@
   "scripts": {
     "build": "webpack --config ./config/webpack.config.prod.js",
     "start": "webpack-dev-server --config ./config/webpack.config.dev.js --hot",
-    "test": "npm run lint && flow status",
-    "lint": "eslint \"./src/**/*.{js,jsx}\"",
-    "lint-fix": "eslint --fix \"./src/**/*.{js,jsx}\""
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint-fix": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx}\""
   },
   "repository": {
     "type": "git",
