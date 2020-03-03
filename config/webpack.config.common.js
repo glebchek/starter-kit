@@ -33,6 +33,17 @@ module.exports = {
         use: ['babel-loader', 'eslint-loader']
       },
       {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", {
+          loader: "postcss-loader",
+          options: {
+            plugins: [
+              require("autoprefixer"),
+            ]
+          }
+        }]
+      },
+      {
         test: /\.(png|svg|jpg)$/,
         use: ["file-loader"]
       }
