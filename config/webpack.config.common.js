@@ -1,26 +1,27 @@
-//Tools
-const merge = require("webpack-merge");
+// Plugins
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const AutoPrefixer = require('autoprefixer');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
-//Plugins
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
-
-//Local
-const paths = require("./paths");
+// Local
+const paths = require('./paths');
 
 module.exports = {
   entry: paths.appIndex,
   output: {
     path: paths.appDist,
-    filename: "[name].[hash:8].js",
-    publicPath: "/"
+    filename: '[name].[contenthash:8].js',
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Starter Kit",
-      template: paths.appTemplateHtml
+      title: 'Starter Kit',
+      template: paths.appTemplateHtml,
     }),
-    new DuplicatePackageCheckerPlugin()
+    new ESLintPlugin({
+      context: paths.appSrc,
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+    }),
   ],
   module: {
     rules: [
@@ -30,23 +31,23 @@ module.exports = {
         resolve: {
           extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         },
-        use: ['babel-loader', 'eslint-loader']
+        use: ['babel-loader'],
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader", {
-          loader: "postcss-loader",
+        use: ['style-loader', 'css-loader', {
+          loader: 'postcss-loader',
           options: {
             plugins: [
-              require("autoprefixer"),
-            ]
-          }
-        }]
+              AutoPrefixer,
+            ],
+          },
+        }],
       },
       {
         test: /\.(png|svg|jpg)$/,
-        use: ["file-loader"]
-      }
+        use: ['file-loader'],
+      },
     ],
-  }
+  },
 };
