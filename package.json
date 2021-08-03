@@ -8,7 +8,7 @@
   "main": "index.jsx",
   "scripts": {
     "build": "webpack --config ./config/webpack.config.prod.js",
-    "start": "webpack serve --config ./config/webpack.config.dev.js --hot",
+    "start": "webpack serve --config ./config/webpack.config.dev.js",
     "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
     "lint-fix": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx}\""
   },

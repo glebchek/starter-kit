@@ -13,6 +13,7 @@ module.exports = {
     filename: '[name].[contenthash:8].js',
     publicPath: '/',
   },
+  target: 'web',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Starter Kit',
