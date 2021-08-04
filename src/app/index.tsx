@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from 'astroturf';
+import { IconDefinition, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import { Main } from './main';
 import { Header } from './header';
@@ -37,13 +38,12 @@ const appStyle = css`
 
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
+  scroll-behavior: smooth;
+  background-color: var(--body-color);
 
   *,::before,::after {
     box-sizing: border-box;
   }
-
-  scroll-behavior: smooth;
-  background-color: var(--body-color);
 
   h1,h2,h3 {
     color: var(--title-color);
@@ -71,10 +71,24 @@ const appStyle = css`
   }
 `;
 
+export interface ICategory {
+  id: string;
+  name: string;
+  icon: IconDefinition
+}
+
+const categories: ICategory[] = [
+  {
+    id: 'about',
+    name: 'About me',
+    icon: faUser,
+  }
+]
+
 export function App(): JSX.Element {
   return (
     <div className={appStyle}>
-      <Header />
+      <Header categories={categories}/>
       <Main />
     </div>
   );
