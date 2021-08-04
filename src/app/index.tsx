@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'astroturf';
-import { IconDefinition, faUser } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, faUser, faAddressBook, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 
 import { Main } from './main';
 import { Header } from './header';
@@ -40,6 +40,8 @@ const appStyle = css`
   font-size: var(--normal-font-size);
   scroll-behavior: smooth;
   background-color: var(--body-color);
+  width: 100%;
+  height: 100%;
 
   *,::before,::after {
     box-sizing: border-box;
@@ -82,6 +84,16 @@ const categories: ICategory[] = [
     id: 'about',
     name: 'About me',
     icon: faUser,
+  },
+  {
+    id: 'contacts',
+    name: 'Contacts',
+    icon: faAddressBook,
+  },
+  {
+    id: 'education',
+    name: 'Education',
+    icon: faUserGraduate,
   }
 ]
 
