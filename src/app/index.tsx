@@ -8,6 +8,19 @@ import { Header } from './header';
 const appStyle = css`
   @import '~@ibm/plex/css/ibm-plex.css';
 
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
   --header-height: 3rem;
 
   /*========== Colors ==========*/
@@ -79,7 +92,7 @@ export interface ICategory {
   icon: IconDefinition
 }
 
-const categories: ICategory[] = [
+export const categories: ICategory[] = [
   {
     id: 'about',
     name: 'About me',

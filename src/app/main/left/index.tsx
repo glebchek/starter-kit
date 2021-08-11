@@ -2,15 +2,17 @@ import React from 'react';
 import { About } from './about';
 import { Contacts } from './contacts';
 import { Eductaion } from './education';
-
 import { Introduction } from './introduction';
 import { Skills } from './skills';
+import { Category } from '../category';
 
-export function LeftSide(): JSX.Element {
+import { IStylableComponentProps } from '../../utils/i-stylable-component-props';
+
+export function LeftSide({ className }: IStylableComponentProps): JSX.Element {
   return (
-    <div>
+    <div className={className}>
       <Introduction />
-      <Contacts />
+      <Category id="ddd" name="fsdf"><Contacts /></Category>
       <About />
       <Eductaion />
       <Skills />

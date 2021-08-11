@@ -4,9 +4,11 @@ import { Interests } from './interests';
 import { Languages } from './languages';
 import { References } from './references';
 
-export function RightSide(): JSX.Element {
+import { IStylableComponentProps } from '../../utils/i-stylable-component-props';
+
+export function RightSide({ className }: IStylableComponentProps): JSX.Element {
   return (
-    <div>
+    <div className={className}>
       <Experience />
       <References />
       <Languages />
