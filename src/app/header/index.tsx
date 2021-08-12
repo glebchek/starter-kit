@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBorderAll } from '@fortawesome/free-solid-svg-icons';
 
 import { disableLinkDecoration } from '../../styles';
-import { ICategory } from '..';
+import { ICategory } from '../interfaces';
 
 export interface IHeaderProps {
-  categories: ICategory[];
+  categories: ICategory<React.FunctionComponent>[];
 }
 
 const headerStyle = css`

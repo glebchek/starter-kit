@@ -1,9 +1,9 @@
 import React from 'react';
 import { css } from 'astroturf';
-import { IconDefinition, faUser, faAddressBook, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 
 import { Main } from './main';
 import { Header } from './header';
+import { StaticStore } from './store';
 
 const appStyle = css`
   @import '~@ibm/plex/css/ibm-plex.css';
@@ -86,35 +86,11 @@ const appStyle = css`
   }
 `;
 
-export interface ICategory {
-  id: string;
-  name: string;
-  icon: IconDefinition
-}
-
-export const categories: ICategory[] = [
-  {
-    id: 'about',
-    name: 'About me',
-    icon: faUser,
-  },
-  {
-    id: 'contacts',
-    name: 'Contacts',
-    icon: faAddressBook,
-  },
-  {
-    id: 'education',
-    name: 'Education',
-    icon: faUserGraduate,
-  }
-]
-
 export function App(): JSX.Element {
   return (
     <div className={appStyle}>
-      <Header categories={categories}/>
-      <Main />
+      <Header categories={[...StaticStore.categories.left, ...StaticStore.categories.right]}/>
+      <Main categories={StaticStore.categories} />
     </div>
   );
 }

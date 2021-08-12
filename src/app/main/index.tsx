@@ -3,6 +3,7 @@ import { css } from 'astroturf';
 
 import { LeftSide } from './left';
 import { RightSide } from './right';
+import { IStaticStore } from '../store';
 
 const SidebarContainerStyle = css`
   display: flex;
@@ -21,11 +22,15 @@ const RightSideStyle = css`
   min-width: 50%;
 `
 
-export function Main(): JSX.Element {
+interface IMainProps {
+  categories: IStaticStore['categories']
+}
+
+export function Main({categories}: IMainProps): JSX.Element {
   return (
     <main className={SidebarContainerStyle}>
-      <LeftSide className={LeftSideStyle} />
-      <RightSide className={RightSideStyle} />
+      <LeftSide categories={categories.left} className={LeftSideStyle} />
+      <RightSide categories={categories.right} className={RightSideStyle} />
     </main>
   );
 }
